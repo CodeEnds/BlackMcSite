@@ -1,0 +1,6 @@
+# BlackMcSite
+Website for minecraft server.
+View of index:
+![Website view](https://previews.dropbox.com/p/thumb/ACGera_sYFhypAI4KVzP1SCO2uERD6YBcAASXdwxipl6hibLTKp6dU9X5O62uMU8NwM82aShEKCQwi2CJyy6Pb3foFgFCyRstndawItcte6kUYJbCWBQbAjOVwm-MvWJxjFBgRDL_eHMq5ubUCEqd9ujakjBAj7WgKgSrE0NKlBUTW2RTF-WUxWLKaBBtJimXhDcyDkNB3EDmnihJ6mP9aWofmpkTAIAPhUN2tzEfpTV4Zuo-rh450WVawMsBZfJVP6EPAAecf95OCGiiLLTjkGPNVokcK51pF3E5U9U_jwd0cf4Pr0GmS_Z_Z5xOXTmYUDlfPeOjzA2346ybpL1OP9j/p.gif)
+
+
