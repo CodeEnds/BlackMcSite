@@ -1,0 +1,128 @@
+@import 'scss/_reset.scss';
+@import 'scss/_vars.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+
+@import 'scss/scrollbar.scss';
+@import 'scss/loader.scss';
+@import 'scss/navbar.scss';
+
+body {
+    height: 100vh;
+    font-family:'Raleway', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+    width: 100%;
+    position: sticky;
+    background: #232323;
+    opacity: 1 !important;
+    transition: none !important;
+}
+
+main {
+    min-height: calc(100% - 70px);
+    display: flex;
+
+    .left {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .right {
+        width: 50%;
+        background: #1d1d1d;
+        color: $tertiary;
+        display: flex;
+        flex-direction: column;
+
+        .credentials {
+            padding: 40px 0;
+            font-size: 32px;
+            text-align: center;
+            font-weight: 900;
+
+            span {
+                font-weight: 300;
+            }
+        }
+
+        .statistics {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10px 0;
+
+            .statistic {
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 0 10px;
+                margin: 50px 0;
+
+                .title {
+                    font-size: 34px;
+                    margin-bottom: 10px;
+                    font-weight: 800;
+                }
+
+                .content {
+                    font-size: 22px;
+
+                    span {
+                        font-weight: 600;
+                        font-size: 1.3em;
+                    }
+
+                    p {
+                        margin-top: 15px;
+                    }
+
+                    .progress-bar {
+                        height: 10px;
+                        width: 200px;
+                        background: #e1e1e1;
+                        border-radius: 100px;
+                        overflow: hidden;
+                        margin: 10px 0;
+
+                        .progress-fill {
+                            height: 100%;
+                            background: #369aca;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* RESPONSIVNESS */
+
+@media (max-width: 1023px) {
+    main {
+        height: auto;
+        flex-direction: column;
+    }
+    main .left {
+        height: 50vh;
+    }
+    main .left, main .right {
+        width: 100%;
+    }
+    main .right .statistics .statistic {
+        width: 30%;
+    }
+}
+
+@media (max-width: 640px) {
+    main .right .statistics .statistic {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+}

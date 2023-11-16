@@ -1,0 +1,197 @@
+@import 'scss/_reset.scss';
+@import 'scss/_vars.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+@import 'scss/scrollbar.scss';
+@import 'scss/loader.scss';
+@import 'scss/navbar.scss';
+@import 'scss/footer.scss';
+
+body {
+  min-height: 100vh;
+  font-family: 'Raleway', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1D1D1D;
+}
+
+nav {
+  width: 100%;
+  position: sticky;
+  background: #232323;
+  opacity: 1 !important;
+  transition: none !important;
+}
+
+main {
+  min-height: calc(100% - 70px);
+  background: url("../img/background-shop.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+
+  .shop-container {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+
+    .shop-section-caption {
+      position: relative;
+      text-align: center;
+      color: $tertiary;
+      font-size: 64px;
+      font-weight: 700;
+      font-family: 'Raleway';
+      margin: 40px 0;
+
+      &::before {
+        content: '';
+        position: absolute;
+        right: calc(100% + 20px);
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 6px;
+        background: $primary;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: calc(100% + 20px);
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 6px;
+        background: $primary;
+      }
+    }
+
+    .shop-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .shopping-card {
+        width: 250px;
+        height: 446px;
+        // width: 200px;
+        // height: 350px;
+        background: $tertiary;
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        box-shadow: 0 24px 22px rgba(10, 10, 10, 0.3);
+        transition: 0.3s;
+
+        .buy-buttons {
+          display: flex;
+          column-gap: 10px;
+        }
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 35px 37px rgba(10, 10, 10, 0.5);
+
+          .card-img .card-desc {
+            height: 100%;
+            padding: 10px 15px;
+          }
+        }
+
+
+        .card-img {
+          position: relative;
+          height: -webkit-fill-available;
+          height: 100%;
+
+          .card-desc {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 0;
+            background: $tertiary;
+            overflow: hidden;
+            transition: 0.5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            text-align: center;
+            padding: 0 15px;
+          }
+
+          &.gems-100 {
+            background: url("../img/gems-100.jpg") center/cover no-repeat;
+          }
+
+          &.gems-200 {
+            background: url("../img/gems-200.jpg") center/cover no-repeat;
+          }
+
+          &.gems-500 {
+            background: url("../img/gems-500.jpg") center/cover no-repeat;
+          }
+
+          &.gems-1000 {
+            background: url("../img/gems-1000.jpg") center/cover no-repeat;
+          }
+
+          &.gems-2000 {
+            background: url("../img/gems-2000.jpg") center/cover no-repeat;
+          }
+
+          &.rank-epic {
+            background: url("../img/rank-epic.jpg") center/cover no-repeat;
+          }
+
+          &.rank-elite {
+            background: url("../img/rank-elite.jpg") center/cover no-repeat;
+          }
+
+          &.rank-mythic {
+            background: url("../img/rank-mythic.jpg") center/cover no-repeat;
+          }
+
+          &.rank-legendary {
+            background: url("../img/rank-legendary.jpg") center/cover no-repeat;
+          }
+
+          &.unban {
+            background: url("../img/unban.jpg") center/cover no-repeat;
+          }
+        }
+
+        .card-info {
+          height: 150px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+
+          .price {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 30px;
+          }
+
+          .buy-button {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 16px;
+            border: none;
+            background: $primary;
+            color: #1d1d1d;
+            padding: 5px 26px;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

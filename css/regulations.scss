@@ -1,0 +1,60 @@
+@import 'scss/_reset.scss';
+@import 'scss/_vars.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+@import 'scss/scrollbar.scss';
+@import 'scss/loader.scss';
+@import 'scss/navbar.scss';
+
+* {
+    margin: revert;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Raleway', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1D1D1D;
+}
+
+nav {
+    width: 100%;
+    position: sticky;
+    background: #232323;
+    opacity: 1 !important;
+    transition: none !important;
+}
+
+main {
+    min-height: calc(100vh - 70px);
+    background: url(../img/background-shop.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 19px;
+
+    .container {
+        width: 85%;
+        padding: 20px 50px;
+        background: rgba(0, 0, 0, 0.5);
+
+        h2 {
+            text-align: center;
+            font-size: 36px;
+        }
+    }
+}
+
+/* RESPONSIVNESS */
+
+@media (max-width: 640px) {
+    main .container {
+      width: 100%;
+      padding: 20px 35px;
+    }
+}

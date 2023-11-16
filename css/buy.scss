@@ -1,0 +1,242 @@
+@import 'scss/_reset.scss';
+@import 'scss/_vars.scss';
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
+
+@import 'scss/scrollbar.scss';
+@import 'scss/loader.scss';
+@import 'scss/navbar.scss';
+@import 'scss/footer.scss';
+
+body {
+    height: 100vh;
+    font-family: 'Raleway', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1D1D1D;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+nav {
+    width: 100%;
+    position: sticky;
+    background: #232323;
+    opacity: 1 !important;
+    transition: none !important;
+    flex: 0 0 70px;
+}
+
+main {
+    background: url("../img/background-shop.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 80vh;
+
+    .shop-container {
+        width: 800px;
+        padding: 30px;
+        display: flex;
+        background: #1d1d1d;
+        color: $tertiary;
+        border-radius: 4px;
+        box-shadow: 0 35px 37px rgba(10, 10, 10, 0.5);
+
+        .left {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .right {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-left: 30px;
+            
+            .info {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                flex: 2 1 20%;
+
+                h2 {
+                    // font-size: 32px; //smaller
+                    font-size: 36px;
+                    font-family: 'Montserrat';
+                    margin-bottom: 5px;
+                }
+    
+                h3 {
+                    color: #f3c623;
+                    font-size: 30px;
+                    font-family: 'Montserrat';
+                    font-weight: 300;
+                }
+            }
+
+            form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                flex: 1 1 50%;
+                padding: 0 30px;
+
+                label {
+                    margin-bottom: 5px;
+                }
+
+                input:not([type='submit']), select {
+                    background: #333;
+                    border: 0;
+                    padding: 12px;
+                    margin-bottom: 20px;
+                    font-size: 16px;
+                    transition: 0.3s;
+                    color: $tertiary;
+                    font-family: 'Montserrat';
+            
+                    &:hover {
+                        transform: scale(1.02);
+                    }
+                }
+
+                select {
+                    background: url("data:image/svg+xml,<svg height='15px' width='15px' viewBox='0 0 16 16' fill='%231d1d1d' xmlns='http://www.w3.org/2000/svg'><path d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/></svg>") #333 no-repeat;
+                    background-position: calc(100% - 0.75rem) center !important;
+                    -moz-appearance: none !important;
+                    -webkit-appearance: none !important;
+                    appearance: none !important;
+                    padding-right: 2rem !important;
+                    cursor: pointer;
+                }
+
+                button[type="submit"] {
+                    position: relative;
+                    width: 100%;
+                    background: transparent;
+                    border: 0;
+                    padding: 12px;
+                    margin-bottom: 10px;
+                    cursor: pointer;
+                    color: #1d1d1d;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 16px;
+                    border-radius: 4px;
+                    overflow: hidden;
+                    transition: 0.5s;
+                    margin-top: 5px;
+            
+                    &:hover {
+                        transform: scale(1.02);
+            
+                        .button-fill {
+                            width: 500px;
+                            height: 500px;
+                            left: -220px;
+                            bottom: -300px;
+                        }
+                    }
+            
+                    .button-fill {
+                        position: absolute;
+                        width: 0;
+                        height: 0;
+                        background: $primary;
+                        transition: 0.5s;
+                        left: 0;
+                        bottom: 0;
+                        border-radius: 50%;
+                    }
+            
+                    .button-white-fill {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        background-color: #fff;
+                        left: 0;
+                        bottom: 0;
+                    }
+            
+                    .submit-text {
+                        position: relative;
+                    }
+                }
+            
+                a {
+                    color: $tertiary;
+                }
+            }
+
+            .terms {
+                flex: 1 1;
+                align-items: center;
+                text-align: center;
+                color: #707070;
+
+                a {
+                    color: rgba(#fff, 0.6);
+                    margin-right: 20px;
+                    transition: color 0.5s cubic-bezier(0.58, 0.65, 0.31, 0.73);
+    
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.errbox {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    background: #fff;
+    font-weight: bold;
+    color: red;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: 'Montserrat';
+}
+
+footer {
+    height: 90px !important;
+}
+
+@media (max-width: 1023px) {
+    main {
+        padding: 20px;
+    }
+}
+
+
+@media (max-width: 640px) {
+    main .shop-container {
+        flex-direction: column;
+
+        .left, .right {
+            width: 100%;
+        }
+
+        .left {
+            padding-bottom: 20px;
+        }
+
+        .right, .right form {
+            padding: 0;
+        }
+    }
+}

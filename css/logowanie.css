@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap");
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  background: url("../img/logowanie.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #242424;
+  font-size: 18px;
+  padding: 20px;
+  box-shadow: 0px 40px 100px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  color: white;
+}
+
+form .title {
+  margin-bottom: 15px;
+}
+
+form input {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  color: #FFFFFF;
+}
+
+form .input-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  margin-top: 5px;
+}
+
+form .input-container input[type="number"] {
+  width: 60px;
+  height: 60px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 6px;
+  margin: 0 10px;
+  color: #000;
+}
+
+form input[type="text"], form input[type="password"], form input[type="email"] {
+  background: #333;
+  border: 0;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+form input[type="text"]:hover, form input[type="password"]:hover, form input[type="email"]:hover {
+  transform: scale(1.02);
+}
+
+form button[type="submit"] {
+  position: relative;
+  width: 100%;
+  background: transparent;
+  border: 0;
+  padding: 12px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  color: #1d1d1d;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+form button[type="submit"]:hover {
+  transform: scale(1.02);
+}
+
+form button[type="submit"]:hover .button-fill {
+  width: 400px;
+  height: 400px;
+  left: -200px;
+  bottom: -200px;
+}
+
+form button[type="submit"] .button-fill {
+  position: absolute;
+  width: 0;
+  height: 0;
+  background: #F3C623;
+  transition: 0.5s;
+  left: 0;
+  bottom: 0;
+  border-radius: 50%;
+}
+
+form button[type="submit"] .button-white-fill {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  left: 0;
+  bottom: 0;
+}
+
+form button[type="submit"] .submit-text {
+  position: relative;
+}
+
+form a {
+  color: #FFFFFF;
+}
+
+form #eyeimg {
+  cursor: pointer;
+}
+
+.errbox {
+  position: absolute;
+  bottom: 3vh;
+  right: 3vh;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10px 15px;
+}
+
+.errbox img {
+  width: 30px;
+  margin-right: 10px;
+}

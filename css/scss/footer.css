@@ -1,0 +1,81 @@
+footer {
+  padding: 30px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+footer .container {
+  display: flex;
+  align-items: center;
+  row-gap: 25px;
+  width: 100%;
+  max-width: 1320px;
+}
+
+footer .container .credits {
+  flex: 3 1 40%;
+  display: flex;
+  align-items: center;
+}
+
+footer .container .credits img {
+  width: 64px;
+  margin-right: 15px;
+}
+
+footer .container .credits .authors {
+  text-align: center;
+}
+
+footer .container .credits .authors span {
+  color: #6d6d6d;
+}
+
+footer .container .important-links {
+  flex: 2 2 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .container .important-links a {
+  color: rgba(255, 255, 255, 0.6);
+  margin-right: 20px;
+  transition: color 0.5s cubic-bezier(0.58, 0.65, 0.31, 0.73);
+}
+
+footer .container .important-links a:hover {
+  color: #fff;
+}
+
+footer .container .social-media {
+  flex: 1 2 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .container .social-media .media-icon {
+  margin-left: 20px;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.5s cubic-bezier(0.58, 0.65, 0.31, 0.73);
+}
+
+footer .container .social-media .media-icon:hover {
+  color: #fff;
+}
+
+footer .container .social-media .media-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+/* RESPONSIVNESS */
+@media (max-width: 1023px) {
+  footer .container {
+    max-width: 90%;
+    flex-direction: column;
+  }
+}
